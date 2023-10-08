@@ -20,15 +20,15 @@ export function Chat() {
   });
 
   return (
-    <Card className="w-[440px]">
+    <Card className="h-full w-[440px] grid grid-rows-[min-content_1fr_min-content]">
       <CardHeader>
         <CardTitle>Chat AI</CardTitle>
         <CardDescription>
           Using Vercel SDK to create a chat bot.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <ScrollArea className="h-[600px] w-full space-y-4 pr-4">
+      <CardContent className="overflow-auto h-full">
+        <ScrollArea className="overflow-auto max-h-full w-full space-y-4 pr-4">
           {messages.map((message) => {
             return (
               <div
